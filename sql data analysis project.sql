@@ -1,0 +1,1 @@
+SELECT * FROM covid19.ppercentpopulationvaccinated;
