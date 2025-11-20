@@ -1,0 +1,20 @@
+COWRIE HONEYPOT
+This is a type of tool used in cybersecurity to detect and analyze malicious activity, typically targeting network systems.
+Prerequisites for running cowrie:
+1. Linus based system
+2. Python 3.8
+3. Git
+4. Virtualenv
+
+Steps in running cowrie includes:
+1. Sudo apt update
+2. Sudo apt upgrade -y (to install the recent necessary python file needed and upgrade the obsolete ones no longer in use
+3. Clone the cowrie repository using git: “git clone https://github.com//cowrie/cowrie.git” this command will clone your cowrie repository to your virtual machine.
+4. Cd cowrie ( to change directory to cowrie directory)
+5. Sudo apt install docker.io ( this is to install docker needed for running cowrie honeypot)
+6. Sudo systemctl status docker ( to check if docker is running)
+7. Sudo docker run -p 2222:2222 cowrie/cowrie:latest (this is start the cowrie honeypot operation, the reason we used 2222 as the port is to create a fake ssh port that looks exactly like the real ssh port 22, to attract attacker to attacker)
+8. nmap -p 2222 -sV 192.168.168.130 ( this is to check if the fake ssh port 2222 is open and host is up)
+9. open another terminal to test if the running cowrie honeypot can monitor any traffic or login attempt into the ssh port
+
+
